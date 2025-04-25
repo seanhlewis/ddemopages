@@ -1,0 +1,58 @@
+/* menu.css — subtle light-blue → brand blue background */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  font-family:system-ui,Arial,sans-serif;
+}
+
+html,
+body{
+  height:100%;
+  margin:0;
+}
+
+/* soft blue fade */
+body{
+  background:linear-gradient(
+    180deg,
+    #6d93ff 0%,   /* lighter blue */
+    #4c7aff 35%,
+    #2d63e6 60%,
+    #004cbd 85%
+  );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* card layout rules (unchanged) */
+.menu{
+  display:flex;
+  gap:4vw;
+  padding:4vw;
+  flex-wrap:nowrap;
+}
+
+.menu__card{
+  width:clamp(420px,48vw,800px);
+  border-radius:36px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  transition:transform .4s ease,box-shadow .4s ease;
+  box-shadow:0 12px 24px rgba(0,0,0,.28);
+}
+
+.menu__card:hover,
+.menu__card:focus-visible{
+  transform:scale(1.08);
+  box-shadow:0 0 80px 40px rgba(234,234,234,.38);
+}
+
+.menu__card img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}

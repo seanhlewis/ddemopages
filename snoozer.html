@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snoozer — quick start</title>
+
+  <!-- Quicksand font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css"><!-- keeps the reset rules -->
+
+  <style>
+    /* Navy-to-purple gradient background */
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background-image:linear-gradient(180deg,#213047 60%,#713CF7 160%);
+      color:#fff;
+      font-family:'Quicksand',sans-serif!important;
+    }
+
+    /* Arrow: tip points up-right but stays completely inside viewport */
+    .arrow{
+      position:absolute;
+      top:10%;               /* pushed down so it’s fully visible */
+      right:10%;            /* nudged left from the edge */
+      width:240px;
+      transform:rotate(-45deg) scaleY(-1);
+      pointer-events:none;
+    }
+    .arrow path,
+    .arrow polyline{stroke:#fff;}
+
+    .wrapper{max-width:940px;padding:4rem 2rem;}
+
+    /* Snoozer logo spans (nearly) the full text width, no height constraint */
+    .logo{
+      width:100%;
+      max-width:880px;
+      height:auto;
+      margin:0 0 2.4rem;
+    }
+
+    .step{
+      font-size:2.4rem;
+      line-height:1.45;
+      margin:0 0 2.2rem;
+      font-weight:700;
+    }
+    .number{
+      font-size:2.8rem;
+      margin-right:.35em;
+    }
+
+    /* gold emphasis */
+    .em{color:#E9CB84;}
+
+    /* informational pill (non-interactive) */
+    .cta{
+      display:inline-block;
+      background:#fff;
+      color:#713CF7;
+      font-weight:700;
+      padding:1.2rem 2.6rem;
+      border-radius:50px;
+      font-size:1.45rem;
+      pointer-events:none;
+      user-select:text;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- toolbar arrow -->
+  <svg class="arrow" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 150 Q160 20 310 150" fill="none" stroke-width="18" stroke-linecap="round"/>
+    <polyline points="270,90 310,150 240,140" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="wrapper">
+    <img src="assets/snoozer.png" alt="Snoozer logo" class="logo">
+
+    <p class="step"><span class="number">1.)</span> Please enable the <span class="em">Snoozer extension</span>!</p>
+    <p class="step"><span class="number">2.)</span> Open a <span class="em">new tab</span>, visit <span class="em">any website</span>, close your eyes and start snoozing!</p>
+
+    <div class="cta">
+      Download Snoozer for your browser at <strong>snoozer.app</strong>!
+    </div>
+  </div>
+</body>
+</html>

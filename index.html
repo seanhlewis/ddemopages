@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project menu</title>
+
+  <!-- menu stylesheet -->
+  <link rel="stylesheet" href="menu.css">
+
+  <!-- Inria Sans for footer -->
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital@1&display=swap" rel="stylesheet">
+
+  <style>
+    /* small footer centred at the very bottom */
+    .footer{
+      position:fixed;
+      bottom:12px;
+      left:50%;
+      transform:translateX(-50%);
+      margin:0;
+      font-family:'Inria Sans',sans-serif;
+      font-style:italic;
+      font-size:0.9rem;
+      color:#fff;
+      pointer-events:none;
+      user-select:text;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <!-- Visician VR -->
+    <a href="visician.html" class="menu__card" aria-label="Open Visician VR demo">
+      <img src="assets/showcase1.png" alt="Visician VR demo thumbnail">
+    </a>
+
+    <!-- Snoozer -->
+    <a href="snoozer.html" class="menu__card" aria-label="Open Snoozer info">
+      <img src="assets/showcase2.png" alt="Snoozer extension thumbnail">
+    </a>
+  </div>
+
+  <p class="footer">See more at <strong>demi.hu</strong></p>
+</body>
+</html>
